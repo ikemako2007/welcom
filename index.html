@@ -1,22 +1,52 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
-    <title>縦に並べた画像</title>
     <style>
-        /* 画像を縦に並べるスタイルが必要な場合はここに追加 */
+        body,
+        html {
+            height: 100%;
+            /* フルスクリーン表示 */
+            margin: 0;
+            /* デフォルトのマージンを削除 */
+            display: flex;
+            /* Flexboxを有効化 */
+            justify-content: center;
+            /* 水平方向の中央揃え */
+            align-items: center;
+            /* 垂直方向の中央揃え */
+        }
+
+        .image-container {
+            display: flex;
+            /* Flexboxを有効化 */
+            flex-direction: column;
+            /* 要素を縦方向に並べる */
+            align-items: center;
+            /* 垂直方向の中央揃え */
+        }
+
         img {
-            display: block; /* これにより、各画像が新しい行に表示されます */
-            margin: auto; /* 画像を中央揃えにする場合 */
+            margin: 10px;
+            /* 画像の間に余白を追加 */
         }
     </style>
 </head>
+
 <body>
 
-<div>
-    <img src="path_to_your_first_image.jpg" alt="最初の画像の説明">
-    <img src="path_to_your_second_image.jpg" alt="二番目の画像の説明">
-</div>
+    <div class="image-container">
+
+        <h2>Welcome</h2>
+        <a href="https://www.ikemako2007.com/">
+            <img src="img/ikemako.png">
+        </a>
+        <a href="https://ikeda-makoto-syoten.jimdofree.com//">
+            <img src="img/ikeda.png">
+        </a>
+    </div>
 
 </body>
+
 </html>
